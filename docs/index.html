@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut Maker</title>
+    <link href="/src/css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<header>   
+    <h1>
+       Donut Maker Shop 
+    </h1>
+</header>
+<main>
+
+    <div id="makeDonut">
+        <button id="makeDonut">Make a Donut!</button>
+        <label class="qty">Qty:</label>
+        <input type="text" name="donutQty" class="qty" id="donutQty" readonly>
+    </div>
+    <br/>
+
+    <div class="autoClicker">
+        <button id="autoClicker">Buy Auto-Clicker</button>
+        <label class="cost">Cost:</label>
+        <input type="text" name="autoClickerCost" class="cost" id="autoClickerCost" readonly>
+        <label class="qty">Qty:</label>
+        <input type="text" name="autoClickerCount" class="qty" id="autoClickerCount" readonly>
+    </div>
+    <br/>
+
+    <div id="donutMultiplier">
+        <button id="donutMultiplier">Buy Donut Multiplier</button>                
+        <label class="cost">Cost:</label>
+        <input type="text" name="multiplierCost" class="cost" id="multiplierCost" readonly>
+        <label class="qty">Qty:</label>
+        <input type="text" name="multiplierCount" class="qty" id="multiplierCount" readonly>
+    </div>
+
+</main>
+
+    <script src="/src/js/Donut.js"></script>
+    <script src="/src/js/script.js"></script>
+   
+</body>
+</html>

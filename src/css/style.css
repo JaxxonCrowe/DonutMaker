@@ -1,0 +1,37 @@
+body {
+background-color: #68eeee5d;
+text-align: center;
+}
+
+button {
+    background-color: white;
+    color: purple;
+    font-size: 15px;
+    font-weight: 600;
+    border:violet;
+    border-style: groove;
+}
+
+label {
+    font-size: 12px;
+    width: 20px;
+    color: darkmagenta;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    font-weight: 300;
+    width: 100px;
+}
+
+.cost {
+    color:green;
+    font-size: 15px;
+}    
+
+.qty {
+    color: darkmagenta;
+    font-size: 15px;
+} 
