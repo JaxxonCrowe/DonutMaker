@@ -1,37 +1,29 @@
 body {
-background-color: #68eeee5d;
+background-color: #b6e9588c;
 text-align: center;
 }
 
+h1 {
+    color: rgba(255, 0, 85, 0.596);
+}
+
 button {
-    background-color: white;
-    color: purple;
-    font-size: 15px;
+    background-color: rgba(144, 208, 245, 0.781);
+    font-size: 10px;
+    font-weight: 200;
+    color: green;
+}
+
+#btnTitle {
+    font-size: 14px;
     font-weight: 600;
-    border:violet;
-    border-style: groove;
+    color: green;
 }
 
-label {
-    font-size: 12px;
-    width: 20px;
-    color: darkmagenta;
+#btnText {
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(255, 0, 85, 0.596);
 }
 
-input {
-    background-color: transparent;
-    border: none;
-    font-size: 15px;
-    font-weight: 300;
-    width: 100px;
-}
 
-.cost {
-    color:green;
-    font-size: 15px;
-}    
-
-.qty {
-    color: darkmagenta;
-    font-size: 15px;
-} 

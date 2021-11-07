@@ -14,35 +14,25 @@
     </h1>
 </header>
 <main>
+    <img src="/src/img/bright_donuts.jpeg" height="150px">
 
     <div id="makeDonut">
-        <button id="makeDonut">Make a Donut!</button>
-        <label class="qty">Qty:</label>
-        <input type="text" name="donutQty" class="qty" id="donutQty" readonly>
-    </div>
-    <br/>
+        <button id="makeDonut" onclick="makeDonut()"><span id="btnTitle">Make a DONUT!</span></br><span id="btnText">Donuts Available: </span><span id="numberOfDonuts">0</span></button>
+    </div> <br/>
 
-    <div class="autoClicker">
-        <button id="autoClicker">Buy Auto-Clicker</button>
-        <label class="cost">Cost:</label>
-        <input type="text" name="autoClickerCost" class="cost" id="autoClickerCost" readonly>
-        <label class="qty">Qty:</label>
-        <input type="text" name="autoClickerCount" class="qty" id="autoClickerCount" readonly>
-    </div>
-    <br/>
+    <div class="buyClicker">
+        <button id="buyClicker" onclick="buyClicker()"><span id="btnTitle">Auto-Clicker</span></br><span id="btnText">Clicker Qty: </span><span id="numberOfClickers">0</span></br>
+            <span id="btnText">Clicker Cost: </span><span id="clickerCost">100</span></button> 
+    </div> <br/> 
 
-    <div id="donutMultiplier">
-        <button id="donutMultiplier">Buy Donut Multiplier</button>                
-        <label class="cost">Cost:</label>
-        <input type="text" name="multiplierCost" class="cost" id="multiplierCost" readonly>
-        <label class="qty">Qty:</label>
-        <input type="text" name="multiplierCount" class="qty" id="multiplierCount" readonly>
-    </div>
+    <div class="buyMultiplier">
+        <button id="buyMultiplier" onclick="buyMultiplier()"><span id="btnTitle">Donut Multiplier</span></br><span id="btnText">Multiplier Qty: </span><span id="numberOfMultipliers">0</span></br>
+            <span id="btnText">Multiplier Cost: </span><span id="multiplierCost">20</span></button> 
+    </div> 
 
 </main>
 
-    <script src="/src/js/Donut.js"></script>
+    <script src="/src/js/DonutShop.js"></script>
     <script src="/src/js/script.js"></script>
-   
 </body>
 </html>

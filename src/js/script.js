@@ -1,35 +1,56 @@
 const inputDonutQty = document.getElementById("donutQty");
-// const inputDonutQty = document.getElementById("makeDonut");
-// const autoclickerQty = document.getElementById("autoClicker");
-// const donutMultiplierQty = document.getElementById("donutMultiplier");
-// const autoclickerCost = document.getElementById("autoclickerCost");
-// const multiplierCost = document.getElementById("multiplierCost");
+const inputAutoClickerQty = document.getElementById("AutoClickerQty");
+const inputMultiplierQty = document.getElementById("MultiplierQty");
+
+const clickerCost = document.getElementById("clickerCost");
+const multiplierCost = document.getElementById("multiplierCost");
+
 const makeDonutButton = document.getElementById("makeDonut");
-// const autoclickerButton = document.getElementById("autoclick");
-// const click = document.getElementById("makeDonut");
-// const multiplierButton = document.getElementById("multiply");
-//const donutMakingRate = document.getElementById("rate");
+const buyAutoClickerButton = document.getElementById("buyClicker");
+const buyMultiplierButton = document.getElementById("buyMultiplier");
 
-let donutInput = document.getElementById("donutQty");
+const numberOfDonutText = document.getElementById("numberOfDonuts");
+const numberOfClickersText = document.getElementById("numberOfClickers");
+const numberOfMultipliersText = document.getElementById("numberOfMultipliers");
 
-let shop = new Donut();
+let donutshop = new DonutShop();
+let interval;
 
-makeDonutButton.addEventListener("click",function(){
-   
-    shop.makeDonut();
-    console.log("Make Donut button clicked     "+shop.donutQty);
+function buyClicker() {
+   if(donutshop.numberOfDonuts < donutshop.clickerCost){
+      alert("You need a total of " + donutshop.clickerCost + " donuts to buy a clicker.  Patience Grasshopper!!");
+   } else {
+      donutshop.buyClicker();
+      clearInterval(interval);
+      interval = setInterval(function(){
+         donutshop.makeDonut(true);
+         updateHTML();
+      }, 1000);
+   }
 
-    
-    
-    inputDonutQty.value = "++++++++++"+shop.donutQty;
-});
+   updateHTML();
+}
 
-//autoClicker.addEventListener("click",function(){
-//    console.log(`Buy Autoclicker button clicked`);
-//    donutQty.auto_clicker();
-//});
+function makeDonut() {
+   donutshop.makeDonut();
+   updateHTML();
+}
 
-//multiplierButton.addEventListener("click",function(){
-//    console.log(`Buy Multiplier button clicked`);
-//    donutQty.donutMultiplier();
-//});
+function buyMultiplier() {
+   if(donutshop.numberOfDonuts < donutshop.multiplierCost){
+      alert("You need a total of " + donutshop.multiplierCost + " donuts to buy a multiplier.  The wait will be worth it, I promise!!");
+   }  else {
+      donutshop.buyMultiplier();
+   }
+   updateHTML();
+}
+
+function updateHTML() {
+   numberOfDonutText.innerText = donutshop.numberOfDonuts.toFixed(0);
+   // handle this on script.js
+   numberOfClickersText.innerText = donutshop.numberOfClickers.toFixed(0);
+   numberOfMultipliersText.innerText = donutshop.numberOfMultipliers.toFixed(0);
+   multiplierCost.innerText = donutshop.multiplierCost.toFixed(0);
+   clickerCost.innerText = donutshop.clickerCost.toFixed(0);
+   //donutsPerClick.innerText = Math.pow(1.2, donutshop.numberOfMultipliers).toFixed(0);
+}
