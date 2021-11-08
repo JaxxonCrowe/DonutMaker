@@ -6,33 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donut Maker</title>
     <link href="/src/css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>   
-    <h1>
-       Donut Maker Shop 
-    </h1>
-</header>
+
 <main>
-    <img src="/src/img/bright_donuts.jpeg" height="150px">
+    <div class="container">
+        <div1 class="div1">
+            <h1>Fred's Fancies</h1>
+        </div1>
+        <div2 class="modalSection"> 
+            <button class="button" id="modalBtn">
+                Get to Know Fred
+            </button>
+            <span class="modal" id="aboutFred">
+              <content class="modalContent">
+                <span class="closeBtn">&times;</span>
+                <p>
+                    WElCOME TO FRED's FANCIES!</br>Fred has been an avid baker since he was 7 years old, an apprentice of his italian grandmother until he graduated from high school.  His grandparents saw Fred's talent and scraped up the funds to open up a shop for Fred and worked right along side him until they could no longer work.  Now he's got little shops all over the state and is about to expand nationwide.  Take a taste test and tell us what you think!  While you are enjoying the fruits of his labor, take some time to play the game and see how fast you can start producing large quantities of donuts for the very hungry people of the city we live in.  
+                </p>
+            </content>  
+            </span>        
+        </div2>
+        <div3 class="modalSection"> 
+            <button class="button" id="modalBtn">
+                Game Inspiration 
+            </button>
+            <span class="modal" id="gameInspiration">
+                <content class="modalContent">
+                    <span class="closeBtn">&times;</span>
+                    <p>
+                        The inspiration for the game came from the one and only <a href="https://iogames.onl/cookie-clicker">Cookie Clicker Game</a> Do go ahead and check it out after you finish playing here.
+                    </p>
+                </content>  
+            </span>        
 
-    <div id="makeDonut">
-        <button id="makeDonut" onclick="makeDonut()"><span id="btnTitle">Make a DONUT!</span></br><span id="btnText">Donuts Available: </span><span id="numberOfDonuts">0</span></button>
-    </div> <br/>
+        </div3>
+        <div4 class="modalSection"> 
+            <button class="button" id="modalBtn">
+                About the Programmer
+            </button>        
+            <span class="modal" id="aboutJCrowe">
+                <content class="modalContent">
+                    <span class="closeBtn">&times;</span>
+                    <p>
+                        Jaxxon Crowe is a software developer who is nearly complete in upping his game by becoming certified as a C# Full Stack web developer.  Of course this is just the beginning of his new adventure at this level. Check out some of his most recent work here.  <a label="Jaxxon's Portfolio" href="https://jaxxoncrowe.github.io/">Jaxxon's Portfolio</a>
+                    </p>
+                </content>                  
+            </span>
+        </div>
+        <div5 class="button" id="Buttons"> 
+            <button class="buttonGame id="makeDonut" onclick="makeDonut()"><span id="btnTitle">Make a DONUT!</span></br><span id="btnText">Donuts Available: </span><span id="numberOfDonuts">0</span></button>
 
-    <div class="buyClicker">
-        <button id="buyClicker" onclick="buyClicker()"><span id="btnTitle">Auto-Clicker</span></br><span id="btnText">Clicker Qty: </span><span id="numberOfClickers">0</span></br>
-            <span id="btnText">Clicker Cost: </span><span id="clickerCost">100</span></button> 
-    </div> <br/> 
+            <button class="buttonGame" id="buyClicker" onclick="buyClicker()"><span id="btnTitle">Auto-Clicker</span></br><span id="btnText">Clicker Qty: </span><span id="numberOfClickers">0</span></br>
+                <span id="btnText">Clicker Cost: </span><span id="clickerCost">100</span></button> 
 
-    <div class="buyMultiplier">
-        <button id="buyMultiplier" onclick="buyMultiplier()"><span id="btnTitle">Donut Multiplier</span></br><span id="btnText">Multiplier Qty: </span><span id="numberOfMultipliers">0</span></br>
-            <span id="btnText">Multiplier Cost: </span><span id="multiplierCost">20</span></button> 
-    </div> 
+            <button class="buttonGame" id="buyMultiplier" onclick="buyMultiplier()"><span id="btnTitle">Donut Multiplier</span></br><span id="btnText">Multiplier Qty: </span><span id="numberOfMultipliers">0</span></br>
+                <span id="btnText">Multiplier Cost: </span><span id="multiplierCost">20</span></button> 
+        </div5>
+        <div6 class="div6"> 
 
+        </div6>
+        <div7 class="div7"> 
+            <button class="buttonReset" id="resetButton" onclick="resetGame()"><span id="btnTitle">Reset Game</span></button>
+        </div7>
+        <div8 class="div8"> 
+            <img id="donutImg" src="/src/img/bright_donuts.jpeg">
+        </div8>
+    </div>
+    
 </main>
 
     <script src="/src/js/DonutShop.js"></script>
     <script src="/src/js/script.js"></script>
+
 </body>
 </html>

@@ -18,7 +18,7 @@ let interval;
 
 function buyClicker() {
    if(donutshop.numberOfDonuts < donutshop.clickerCost){
-      alert("You need a total of " + donutshop.clickerCost + " donuts to buy a clicker.  Patience Grasshopper!!");
+      alert("You need a total of " + donutshop.clickerCost.toFixed(0) + " donuts to buy a clicker.  Patience Grasshopper!!");
    } else {
       donutshop.buyClicker();
       clearInterval(interval);
@@ -38,7 +38,7 @@ function makeDonut() {
 
 function buyMultiplier() {
    if(donutshop.numberOfDonuts < donutshop.multiplierCost){
-      alert("You need a total of " + donutshop.multiplierCost + " donuts to buy a multiplier.  The wait will be worth it, I promise!!");
+      alert("You need a total of " + donutshop.multiplierCost.toFixed(0) + " donuts to buy a multiplier.  The wait will be worth it, I promise!!");
    }  else {
       donutshop.buyMultiplier();
    }
