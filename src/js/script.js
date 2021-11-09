@@ -54,3 +54,44 @@ function updateHTML() {
    clickerCost.innerText = donutshop.clickerCost.toFixed(0);
    //donutsPerClick.innerText = Math.pow(1.2, donutshop.numberOfMultipliers).toFixed(0);
 }
+
+// modal setup - variables
+let modalAboutFred = document.getElementById("aboutFred");
+let modalGameInspiration = document.getElementById("gameInspiration");
+let modalAboutJCrowe = document.getElementById("aboutJCrowe");
+
+let modalAboutFredBtn = document.getElementById("modalAboutFredBtn");
+let modalGameInspirationBtn = document.getElementById("modalGameInspirationBtn");
+let modalAboutJCroweBtn = document.getElementById("modalAboutJCroweBtn");
+
+let closeAboutFredBtn = document.getElementById("closeAboutFredBtn");
+let closeGameInspirationBtn = document.getElementById("closeGameInspirationBtn");
+let closeAboutJCroweBtn = document.getElementById("closeAboutJCroweBtn");
+
+// modal setup - Button event listeners & functions
+modalAboutFredBtn.addEventListener('click',openModalAboutFred);
+function openModalAboutFred(){
+   modalAboutFredBtn.style.display = "block";
+}
+closeAboutFredBtn.addEventListener('click', closeModalAboutFred);
+function closeModalAboutFred(){
+   modalAboutFredBtn.style.display = "none";
+}
+
+modalGameInspirationBtn.addEventListener('click',openModalGameInspiration);
+function openModalGameInspiration(){
+   modalGameInspiration.style.display = "block";
+}
+closeGameInspirationBtn.addEventListener('click', closeModalGameInspiration);
+function closeModalGameInspiration(){
+   modalGameInspiration.style.display = "none";
+}
+
+modalAboutJCroweBtn.addEventListener('click',openModalJCrowe);
+function openModalAboutJCrowe(){
+   modalAboutJCrowe.display.style = "block";
+}
+closeAboutJCroweBtn.addEventListener('click', closeModalAboutJCrowe);
+function closeModalAboutJCrowe(){
+   modalAboutJCrowe.display.style = "none";
+}

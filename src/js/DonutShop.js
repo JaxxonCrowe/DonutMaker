@@ -10,7 +10,6 @@ class DonutShop{
     // Function to Make a Donut 
     makeDonut(auto){
         if(auto != undefined){
-            this.numberOfDonuts += Math.pow(1.2, this.numberOfMultipliers) * this.numberOfClickers;
         } else {
             this.numberOfDonuts += Math.pow(1.2, this.numberOfMultipliers);
         } 
