@@ -8,45 +8,7 @@ body {
     font-size: 10px;
 }
 
-/* Grid Container specs */ 
-.container {
-    display: grid;
-    grid-template-columns: .35fr .65fr;
-    grid-template-rows: .75fr 2fr;
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
-    margin: none;
-    padding: none;
-    }
-
-/* Grid Area 1 - Header & Modal Buttons */    
-.gridArea1 {
-    grid-area: 1 / 1 / 2 / 3;
-    background-color: rgba(255, 0, 85, 0.596);
-    color: white;
-    margin-bottom: 5px;
- 
-}
-
-/* Header */    
-h1 { 
-    font-family: 'Mochiy Pop P One', sans-serif;
-    font-size: 24px;
-    padding: none;
-    margin: none;
-}
-
-.headerButtons {
-    display: inline-flex;
-    width: 90%;
-    margin-top: 20px;
-}
-
-/* Grid Area 2 - Game & Reset buttons */
-.gridArea2 { 
-    grid-area: 2 / 1 / 3 / 2; 
-    margin-top: 5%;
-}
+/* General for all buttons */
 button {
     background-color: rgba(79, 171, 224, 0.781);
     font-family: 'Indie Flower', cursive;
@@ -57,21 +19,79 @@ button {
     vertical-align: middle;
     width: 100%;
     padding: 8px;
+    justify-content: center;
 }
-.buttonGame {
+
+/* Grid Container specs */ 
+.container {
+    display: grid;
+    grid-template-columns: .35fr .65fr;
+    grid-template-rows: .75fr 2fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    margin: none;
+    padding: none;
+}
+
+/* Grid Area 1 - Header & Modal Buttons */    
+.gridArea1 {
+    grid-area: 1 / 1 / 2 / 3;
+    background-color: rgba(255, 0, 85, 0.596);
+    color: white;
+    margin-bottom: 2px;
+}
+
+/* This is the styling for the header */    
+#header { 
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 28px;
+    padding: none;
+    margin: none;
+}
+/* This is the styling for the modal buttons as a group */
+.headerButtons {
+    display: inline-flex;
+    width: 90%;
     margin: 0 0 5px 0;
 }
+
+/* This is the styling for the modal buttons individually */
+.modalButton {
+    text-align: center;  
+    background-color: white;
+    margin: 0 3px 0 3px;
+    color:rgba(255, 0, 85, 0.596);
+    font-family: 'Indie Flower', cursive;
+}
+
+.modalTitle {
+    font-weight: 600;
+    color: rgba(255, 0, 21, 0.582);
+}
+
+
+/* Grid Area 2 - Game & Reset buttons */
+.gridArea2 { 
+    grid-area: 2 / 1 / 3 / 2; 
+    margin-top: 15px;
+}
+
+/* General styling for Game Buttons */
+.buttonGame {
+    margin: 0 0 5px 0;
+    font-size: 11px;
+    font-weight: 600;
+}
+
 /* Specific for Game Button Titles */ 
 .btnTitle {
     font-family: 'Mochiy Pop P One', sans-serif;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 800;
     color: white;
 }
-/* Specific for Game Button Text that gives cost & qty */ 
+/* Specific for Game Button Cost & Qty Text */ 
 .btnText {
-    font-size: 10px;
-    font-weight: 600;
     color: rgba(255, 0, 85, 0.3);
 }
 
@@ -87,41 +107,7 @@ button {
 .gridArea3 { 
     grid-area: 2 / 2 / 3 / 3;
     margin-bottom: 5px;
-    padding: 20px;
-}
-
-/* Modal - Game Inspiration */ 
-/* #div5 {
- 
-    margin-bottom: 0, 0, 5px 0;
-    vertical-align: top;
-} */
-
-/* Modal - About JCrowe */ 
-/* #div7 { 
-
-    margin-bottom: 0, 0, 5px 0;
-    vertical-align: top;
-} */
-
-/* General for all buttons */ 
-
-
-
-
-/* Donut Image */ 
-#donutImage {
-    padding-top: 20px;
-}
-
-/* This is the styling for each of the modal buttons - id = modalBtn */
-.modalButton {
-    text-align: center;  
-    background-color: white;
-    padding: 3px;
-    color:rgba(255, 0, 85, 0.596);
-    font-family: 'Indie Flower', cursive;
-    display: inline-flex;
+    padding: 20px 20px 0 40px;
 }
 
 /* These are the actual modal boxes that pop out and need to be hidden unless the modal button is clicked */
@@ -130,16 +116,17 @@ button {
     display: none;
     background-color: white;
     z-index:1;
-    width: 145px;
-    height: 105px;
+    width: 250px;
+    height: 75px;
     float: right;
     overflow: auto;
-    color: green;
+    color: rgb(64, 188, 219);
     font-size: 8px;
-    padding: 5px;
+    padding: 5px 10px;
     border-width: 3px;
     border-color:rgba(255, 0, 21, 0.582);
     border-style:ridge;
+    position: absolute;
 } 
 
 /* This is for the button to close out of the modal box */

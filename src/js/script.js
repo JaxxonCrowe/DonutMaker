@@ -16,6 +16,12 @@ const numberOfMultipliersText = document.getElementById("numberOfMultipliers");
 let donutshop = new DonutShop();
 let interval;
 
+// Game functions in Grid Area 2 - in order of appearance top to bottom
+function makeDonut() {
+   donutshop.makeDonut();
+   updateHTML();
+}
+
 function buyClicker() {
    if(donutshop.numberOfDonuts < donutshop.clickerCost){
       alert("You need a total of " + donutshop.clickerCost.toFixed(0) + " donuts to buy a clicker.  Patience Grasshopper!!");
@@ -27,12 +33,6 @@ function buyClicker() {
          updateHTML();
       }, 1000);
    }
-
-   updateHTML();
-}
-
-function makeDonut() {
-   donutshop.makeDonut();
    updateHTML();
 }
 
@@ -45,6 +45,7 @@ function buyMultiplier() {
    updateHTML();
 }
 
+// Function to use within the Game Functions above that will update the numbers
 function updateHTML() {
    numberOfDonutText.innerText = donutshop.numberOfDonuts.toFixed(0);
    // handle this on script.js
@@ -55,29 +56,31 @@ function updateHTML() {
    //donutsPerClick.innerText = Math.pow(1.2, donutshop.numberOfMultipliers).toFixed(0);
 }
 
-// modal setup - variables
-let modalAboutFred = document.getElementById("aboutFred");
-let modalGameInspiration = document.getElementById("gameInspiration");
-let modalAboutJCrowe = document.getElementById("aboutJCrowe");
+// Modal setup - variables
+const modalAboutFred = document.getElementById("aboutFred");
+const modalGameInspiration = document.getElementById("gameInspiration");
+const modalAboutJCrowe = document.getElementById("aboutJCrowe");
 
-let modalAboutFredBtn = document.getElementById("modalAboutFredBtn");
-let modalGameInspirationBtn = document.getElementById("modalGameInspirationBtn");
-let modalAboutJCroweBtn = document.getElementById("modalAboutJCroweBtn");
+const modalAboutFredBtn = document.getElementById("modalAboutFredBtn");
+const modalGameInspirationBtn = document.getElementById("modalGameInspirationBtn");
+const modalAboutJCroweBtn = document.getElementById("modalAboutJCroweBtn");
 
-let closeAboutFredBtn = document.getElementById("closeAboutFredBtn");
-let closeGameInspirationBtn = document.getElementById("closeGameInspirationBtn");
-let closeAboutJCroweBtn = document.getElementById("closeAboutJCroweBtn");
+const closeAboutFredBtn = document.getElementById("closeAboutFredBtn");
+const closeGameInspirationBtn = document.getElementById("closeGameInspirationBtn");
+const closeAboutJCroweBtn = document.getElementById("closeAboutJCroweBtn");
 
-// modal setup - Button event listeners & functions
+// Modal setup - Button event listeners & functions
+// About Fred Modal
 modalAboutFredBtn.addEventListener('click',openModalAboutFred);
 function openModalAboutFred(){
-   modalAboutFredBtn.style.display = "block";
+   modalAboutFred.style.display = "block";
 }
 closeAboutFredBtn.addEventListener('click', closeModalAboutFred);
 function closeModalAboutFred(){
-   modalAboutFredBtn.style.display = "none";
+   modalAboutFred.style.display = "none";
 }
 
+// Game Inspiration Modal
 modalGameInspirationBtn.addEventListener('click',openModalGameInspiration);
 function openModalGameInspiration(){
    modalGameInspiration.style.display = "block";
@@ -87,11 +90,12 @@ function closeModalGameInspiration(){
    modalGameInspiration.style.display = "none";
 }
 
-modalAboutJCroweBtn.addEventListener('click',openModalJCrowe);
+// About the Programmer Modal
+modalAboutJCroweBtn.addEventListener('click',openModalAboutJCrowe);
 function openModalAboutJCrowe(){
-   modalAboutJCrowe.display.style = "block";
+   modalAboutJCrowe.style.display = "block";
 }
 closeAboutJCroweBtn.addEventListener('click', closeModalAboutJCrowe);
 function closeModalAboutJCrowe(){
-   modalAboutJCrowe.display.style = "none";
+   modalAboutJCrowe.style.display = "none";
 }
