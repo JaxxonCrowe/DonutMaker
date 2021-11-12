@@ -27,11 +27,12 @@ function buyClicker() {
       alert("You need a total of " + donutshop.clickerCost.toFixed(0) + " donuts to buy a clicker.  Patience Grasshopper!!");
    } else {
       donutshop.buyClicker();
-      clearInterval(interval);
+      // clearInterval(interval);
       interval = setInterval(function(){
-         donutshop.makeDonut(true);
+         donutshop.makeDonut();
          updateHTML();
       }, 1000);
+      
    }
    updateHTML();
 }
@@ -54,6 +55,15 @@ function updateHTML() {
    multiplierCost.innerText = donutshop.multiplierCost.toFixed(0);
    clickerCost.innerText = donutshop.clickerCost.toFixed(0);
    //donutsPerClick.innerText = Math.pow(1.2, donutshop.numberOfMultipliers).toFixed(0);
+}
+
+// Function to Reset the Game
+function resetGame(){
+   clearInterval(interval);
+   donutshop.numberOfDonuts = 0;
+   donutshop.numberOfClickers = 0;
+   donutshop.numberOfMultipliers = 0;
+   updateHTML();
 }
 
 // Modal setup - variables
