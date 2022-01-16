@@ -14,7 +14,9 @@ const numberOfClickersText = document.getElementById("numberOfClickers");
 const numberOfMultipliersText = document.getElementById("numberOfMultipliers");
 
 let donutshop = new DonutShop();
+
 let interval;
+
 
 // Game functions in Grid Area 2 - in order of appearance top to bottom
 function makeDonut() {
@@ -27,7 +29,7 @@ function buyClicker() {
       alert("You need a total of " + donutshop.clickerCost.toFixed(0) + " donuts to buy a clicker.  Patience Grasshopper!!");
    } else {
       donutshop.buyClicker();
-      // clearInterval(interval);
+      clearInterval(interval);
       interval = setInterval(function(){
          donutshop.makeDonut();
          updateHTML();
@@ -56,13 +58,18 @@ function updateHTML() {
    clickerCost.innerText = donutshop.clickerCost.toFixed(0);
    //donutsPerClick.innerText = Math.pow(1.2, donutshop.numberOfMultipliers).toFixed(0);
 }
+function stopGame(){
+   clearInterval(interval);
+}
 
 // Function to Reset the Game
 function resetGame(){
-   clearInterval(interval);
    donutshop.numberOfDonuts = 0;
    donutshop.numberOfClickers = 0;
    donutshop.numberOfMultipliers = 0;
+   donutshop.clickerCost = 100;
+   donutshop.multiplierCost = 20;
+   stopGame();
    updateHTML();
 }
 

@@ -1,8 +1,8 @@
 class DonutShop{
     constructor(){
         this.numberOfDonuts = 85; 
-        this.numberOfClickers = 2;
-        this.numberOfMultipliers = 10;
+        this.numberOfClickers = 0;
+        this.numberOfMultipliers = 0;
         this.clickerCost = 100; 
         this.multiplierCost = 20;
     }
@@ -10,6 +10,7 @@ class DonutShop{
     // Function to Make a Donut 
     makeDonut(auto){
         if(auto != undefined){
+            this.numberOfDonuts += Math.pow(1.2, this.numberOfMultipliers) * this.numberOfClickers;
         } else {
             this.numberOfDonuts += Math.pow(1.2, this.numberOfMultipliers);
         } 

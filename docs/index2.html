@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut Maker</title>
+    <link href="/src/css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<header>   
+    <h1>
+       Donut Maker Shop 
+    </h1>
+</header>
+<main>
+    <img src="/src/img/bright_donuts.jpeg" height="150px">
+
+    <div id="makeDonut">
+        <button id="makeDonut" onclick="makeDonut()"><span id="btnTitle">Make a DONUT!</span></br><span id="btnText">Donuts Available: </span><span id="numberOfDonuts">0</span></button>
+    </div> <br/>
+
+    <div class="buyClicker">
+        <button id="buyClicker" onclick="buyClicker()"><span id="btnTitle">Auto-Clicker</span></br><span id="btnText">Clicker Qty: </span><span id="numberOfClickers">0</span></br>
+            <span id="btnText">Clicker Cost: </span><span id="clickerCost">100</span></button> 
+    </div> <br/> 
+
+    <div class="buyMultiplier">
+        <button id="buyMultiplier" onclick="buyMultiplier()"><span id="btnTitle">Donut Multiplier</span></br><span id="btnText">Multiplier Qty: </span><span id="numberOfMultipliers">0</span></br>
+            <span id="btnText">Multiplier Cost: </span><span id="multiplierCost">20</span></button> 
+    </div> 
+
+</main>
+
+    <script src="/src/js/DonutShop.js"></script>
+    <script src="/src/js/script.js"></script>
+</body>
+</html>

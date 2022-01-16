@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donut Maker</title>
-    <link href="/src/css/style.css" rel="stylesheet" type="text/css"/>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Mochiy+Pop+P+One&display=swap" rel="stylesheet" crossorigin="anonymous">
 
+    <title>Donut Maker Game</title>
+    
+</head>
+
+<body>
 <main>
     <div class="container">
 
         <!-- GRID AREA 1 - Header Section -->
         <div class="gridArea1" >
-            <p id="header">Fred's Fancies</p>
-            <div class="headerButtons">
+            <p class="headerTitle">Fred's Fancies</p>
+            <div class="headerModalButtons">
                 <button class="modalButton" id="modalAboutFredBtn">
                     Get to Know Fred
                 </button>
@@ -33,90 +33,62 @@
             </div>
         </div>
 
-        <!-- GRID AREA 2 - PLAY & RESET Buttons -->
+        <!-- GRID AREA 2 - GAME & RESET Buttons -->
         <!-- Game Buttons -->
         <div class="gridArea2"> 
-            <button class="buttonGame" id="makeDonut" onclick="makeDonut()"><span class="btnTitle">Make a DONUT!</span></br><span class="btnText">Donuts Available: </span><span id="numberOfDonuts">0</span></button>
+            <div class="gameBtns">
+                <button class="buttonGame" id="makeDonutButton" onclick="makeDonut()"><span class="btnTitle">Make a DONUT!</span></br><span class="btnText">Donuts Available: </span><span id="numberOfDonuts">0</span></button>
 
-            <button class="buttonGame" id="buyClicker" onclick="buyClicker()"><span class="btnTitle">Auto-Clicker</span></br><span class="btnText">Clicker Qty: </span><span id="numberOfClickers">0</span></br>
+                <button class="buttonGame" id="buyClickerButton" onclick="buyClicker()"><span class="btnTitle">Auto-Clicker</span></br><span class="btnText">Clicker Qty: </span><span id="numberOfClickers">0</span></br>
                 <span class="btnText">Clicker Cost: </span><span id="clickerCost">100</span></button> 
 
-            <button class="buttonGame" id="buyMultiplier" onclick="buyMultiplier()"><span class="btnTitle">Donut Multiplier</span></br><span class="btnText">Multiplier Qty: </span><span id="numberOfMultipliers">0</span></br>                
+                <button class="buttonGame" id="buyMultiplierButton" onclick="buyMultiplier()"><span class="btnTitle">Donut Multiplier</span></br><span class="btnText">Multiplier Qty: </span><span id="numberOfMultipliers">0</span></br>                
                 <span class="btnText">Multiplier Cost: </span><span id="multiplierCost">20</span></button> 
+            </div>
 
-        <div class="gridArea2" id="div"> 
-            <!-- Reset Button -->
-            <button class="resetButton" id="resetButton" onclick="resetGame()"><span class="btnTitle">Reset</span></button>
+            <div class="resetBtn">
+                <!-- Reset Button -->
+                <button class="resetButton" id="resetButton" onclick="resetGame()"><span class="btnTitle">Reset</span></button>
+            </div>
         </div>    
-    </div>
+    
 
-    <!-- GRID AREA 3 - Image & Modal pop-ups -->
-    <!-- Donut Image -->
-    <div class="gridArea3"> 
-        <img id="donutImg" src="/src/img/bright_donuts.jpeg">
-    </div>
+        <!-- GRID AREA 3 - Image & Modal pop-ups -->
+        <!-- Donut Image -->
+        <div class="gridArea3">
+            <div class="donutImg"> 
+                <img id="donutImg" src="/docs/img/bright_donuts.jpeg" alt="Stack of 2 brightly colored donuts with glaze and sprinkles.">
+            </div>
 
-    <!-- Modal Section - modals will go into Grid Area 3 with image -->
-    <div class="gridArea3" id="modalSection"> 
+            <!-- Modal Section - modals will go into Grid Area 3 with image -->
+            <div class="modalSection"> 
                     
-        <!-- Modal - About Fred -->
-        <div class="modalSection"> 
-            <div class="modalContent" id="aboutFred">    
-                <p>
-                    <span class="modalTitle">WELCOME TO FRED's FANCIES!</span></br>Fred has been an avid baker since he was 7 years old and apprenticed with his italian grandmother. </br>Now he's finally got a little shop of his own. Take a taste test and tell us what you think!  
-                    <span class="closeModal" id="closeAboutFredBtn">X</span>  
-                </p>
+                <!-- Modal - About Fred -->
+                <div class="modalContent" id="aboutFred">    
+                    <p>
+                        <span class="modalTitle">WELCOME TO FRED's FANCIES!</span></br>Fred has been an avid baker since he was 7 years old and apprenticed with his italian grandmother. </br>Now he's finally got a little shop of his own. Take a taste test and tell us what you think!  
+                        <span class="closeModal" id="closeAboutFredBtn">X</span>  
+                    </p>
+                </div>
+            
+                <!-- Modal - Game Inspiration -->
+                <div class="modalContent" id="gameInspiration">
+                    <p>
+                        <span class="modalTitle">INSPIRATION FOR GAME</span></br>Every idea is usually inspired along the way by something.  In this case, it's the one and only <a href="https://iogames.onl/cookie-clicker">Cookie Clicker Game</a> After you play the Donut game for a spell, I highly recommend you check out the Cookie Clicker game.
+                        <span class="closeModal" id="closeGameInspirationBtn">X</span>
+                    </p>
+                </div>
+       
+                <!-- Modal - About JCrowe -->
+                <div class="modalContent" id="aboutJCrowe">           
+                    <p>
+                        <span class="modalTitle">ABOUT JAXXON CROWE</span></br>Jaxxon Crowe is a software developer who is soon to be certified in C# Full Stack web development.  Check out some of his more recent work here.  <a label="Jaxxon's Portfolio" href="https://JaxxonCrowe.github.io/">Jaxxon's Portfolio</a>
+                        <span class="closeModal" id="closeAboutJCroweBtn">X</span>
+                    </p>
+                </div>
             </div>
         </div>
- 
-        <!-- Modal - Game Inspiration -->
-        <div class="modalSection"> 
-            <div class="modalContent" id="gameInspiration">
-                <p>
-                    <span class="modalTitle">INSPIRATION FOR GAME</span></br>Every idea is usually inspired along the way by something.  In this case, it's the one and only <a href="https://iogames.onl/cookie-clicker">Cookie Clicker Game</a> After you play the Donut game for a spell, I highly recommend you check out the Cookie Clicker game.
-                    <span class="closeModal" id="closeGameInspirationBtn">X</span>
-                </p>
-            </div>
-        </div>
-
-        <!-- Modal - About JCrowe -->
-        <div class="modalSection"> 
-            <div class="modalContent" id="aboutJCrowe">           
-                <p>
-                    <span class="modalTitle">ABOUT JAXXON CROWE</span></br>Jaxxon Crowe is a software developer who is soon to be certified in C# Full Stack web development.  Check out some of his more recent work here.  <a label="Jaxxon's Portfolio" href="https://jaxxoncrowe.github.io/">Jaxxon's Portfolio</a>
-                    <span class="closeModal" id="closeAboutJCroweBtn">X</span>
-                </p>
-            </div>
-        </div>
-            <div class="modalContent" id="aboutFred">    
-                <p>
-                    WELCOME TO FRED's FANCIES!</br>Fred has been an avid baker since he was 7 years old and apprenticed with his italian grandmother. </br>Now he's finally got a little shop of his own. Take a taste test and tell us what you think!  
-                    <span class="closeModal" id="closedAboutFredBtn">X</span>  
-                </p>
-            </div>
-        </div>
- 
-        <!-- Modal - Game Inspiration -->
-        <div class="modalSection"> 
-            <div class="modalContent" id="gameInspiration">
-                <p>
-                    The Inspiration for This Game</br>Every idea is usually inspired along the way by something.  In this case, it's the one and only <a href="https://iogames.onl/cookie-clicker">Cookie Clicker Game</a> After you play the Donut game for a spell, I highly recommend you check out the Cookie Clicker game.
-                    <span class="closeModal" id="closeGameInspirationBtn">X</span>
-                </p>
-            </div>
-        </div>
-
-        <!-- Modal - About JCrowe -->
-        <div class="modalSection"> 
-            <div class="modalContent" id="aboutJCrowe">           
-                <p>
-                    About the Programmer</br>Jaxxon Crowe is a software developer who is soon to be certified in C# Full Stack web development.  Check out some of his more recent work here.  <a label="Jaxxon's Portfolio" href="https://jaxxoncrowe.github.io/">Jaxxon's Portfolio</a>
-                    <span class="closeModal" id="closeAboutJCroweBtn">X</span>
-                </p>
-            </div>
-        </div>
-
-    </div>
+    </div>    
     
 </main>
 
