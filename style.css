@@ -8,6 +8,17 @@ body {
     font-size: 10px;
 }
 
+/* Grid Container specs */ 
+.container {
+    display: grid;
+    grid-template-columns: .35fr .65fr;
+    grid-template-rows: .75fr 2fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    margin: none;
+    padding: none;
+}
+
 /* General for all buttons */
 button {
     background-color: rgba(79, 171, 224, 0.781);
@@ -22,17 +33,6 @@ button {
     justify-content: center;
 }
 
-/* Grid Container specs */ 
-.container {
-    display: grid;
-    grid-template-columns: .35fr .65fr;
-    grid-template-rows: .75fr 2fr;
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
-    margin: none;
-    padding: none;
-}
-
 /* Grid Area 1 - Header & Modal Buttons */    
 .gridArea1 {
     grid-area: 1 / 1 / 2 / 3;
@@ -44,10 +44,11 @@ button {
 /* This is the styling for the header */    
 #header { 
     font-family: 'Mochiy Pop P One', sans-serif;
-    font-size: 28px;
+    font-size: 3rem;
     padding: none;
-    margin: none;
+    margin: 10px;
 }
+
 /* This is the styling for the modal buttons as a group */
 .headerButtons {
     display: inline-flex;
@@ -57,11 +58,14 @@ button {
 
 /* This is the styling for the modal buttons individually */
 .modalButton {
+    
     text-align: center;  
     background-color: white;
     margin: 0 3px 0 3px;
-    color:rgba(255, 0, 85, 0.596);
+    color: rgba(64, 188, 219,.5);
     font-family: 'Indie Flower', cursive;
+    font-size: 2.5em;
+    font-weight: 500;
 }
 
 .modalTitle {
